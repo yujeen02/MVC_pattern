@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>자동차 리스트</h3>
+    <ul>
+      <% cars.forEach(car => { %>
+      <li>
+        <a href="/cars/detail/<%= car.id %>"><%= car.model %></a>
+      </li>
+      <% }) %>
+    </ul>
+    <li>
+      <a href="/cars/groupByFuel">연료별 자동차 리스트</a>
+    </li>
+    <li>
+      <a href="/cars/expensivecar">비싼 자동차 리스트</a>
+    </li>
+    <li>
+      <a href="/cars/hyundaiCar">현대 자동차 리스트</a>
+    </li>
+    <br />
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>아이템 리스트</h3>
+    <ul>
+      <% items.forEach(item => { %>
+      <li>
+        <a href="/items/detail/<%= item.id %>"><%= item.name %></a>
+      </li>
+      <% }) %>
+    </ul>
+    <li>
+      <a href="/items/expenItem">가장 비싼 아이템</a>
+    </li>
+    <li>
+      <a href="/items/category">가전인 카테고리</a>
+    </li>
+    <li>
+      <a href="/items/highStock">재고가 가장 많은 것</a>
+    </li>
+    <br />
+  </body>
+</html>

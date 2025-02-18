@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>동물 리스트</h3>
+    <ul>
+      <% animals.forEach(animal => { %>
+      <li>
+        <a href="/animals/detail/<%= animal.id %>"><%= animal.name %></a>
+      </li>
+      <% }) %>
+    </ul>
+    <li>
+      <a href="/animals/dogAnimal">강아지 리스트</a>
+    </li>
+    <li>
+      <a href="/animals/leeByName">이름에 '이'가 들어가는 동물 리스트</a>
+    </li>
+    <li>
+      <a href="/animals/youngAnimal">가장 어린 동물 리스트</a>
+    </li>
+    <br />
+  </body>
+</html>

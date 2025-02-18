@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>유저 리스트</h3>
+    <ul>
+      <% users.forEach(user => { %>
+      <li>
+        <a href="/users/detail/<%= user.id %>"><%= user.name %></a>
+      </li>
+      <% }) %>
+    </ul>
+    <li>
+      <a href="/users/mostOld">가장 나이 많은 사람</a>
+    </li>
+    <li>
+      <a href="/users/mostYoung">가장 젊은 사람</a>
+    </li>
+    <li>
+      <a href="/users/thirty">30대인 사람들</a>
+    </li>
+    <br />
+    <a href="/users">뒤로 가기</a>
+  </body>
+</html>

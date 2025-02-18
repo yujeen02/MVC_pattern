@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>과일 리스트</h3>
+    <ul>
+      <% fruits.forEach(fruit => { %>
+      <li>
+        <a href="/fruits/detail/<%= fruit.id %>"><%= fruit.name %></a>
+      </li>
+      <% }) %>
+    </ul>
+    <li>
+      <a href="/fruits/redFruit">빨간 과일 리스트</a>
+    </li>
+    <li>
+      <a href="/fruits/expenFruit">비싼 과일 리스트</a>
+    </li>
+    <li>
+      <a href="/fruits/weightFruit">가장 무거운 과일 리스트</a>
+    </li>
+    <br />
+  </body>
+</html>
