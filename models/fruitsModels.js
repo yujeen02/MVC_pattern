@@ -48,20 +48,20 @@ const fruitById = (id) => {
 
 // 색상이 빨강인 과일 찾기
 const redFruit = () => {
-  return fruitModels.filter((x) => x.color === "빨강");
+  return fruitModels.find((x) => x.color === "빨강");
 };
 
 // 제일 비싼 과일 찾기
 const expensiveFruit = () => {
   const highFruitIt = Math.max(...fruitModels.map((x) => x.price));
-  const mosthighpriceIt = fruitModels.filter((x) => x.price === highFruitIt);
+  const mosthighpriceIt = fruitModels.find((x) => x.price === highFruitIt);
   return mosthighpriceIt;
 };
 
 // 제일 무거운 과일 찾기
 const weightFruit = () => {
   const highWeightFruitIt = Math.max(...fruitModels.map((x) => x.weight));
-  const mosthighpriceIt = fruitModels.filter(
+  const mosthighpriceIt = fruitModels.find(
     (x) => x.weight === highWeightFruitIt
   );
   return mosthighpriceIt;

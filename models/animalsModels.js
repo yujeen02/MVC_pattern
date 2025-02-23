@@ -41,6 +41,10 @@ const allData = () => {
   return animalModels;
 };
 
+const byid = (id) => {
+  return animalModels.find((animal) => animal.id === parseInt(id));
+};
+
 // 특정 id에 해당하는 동물 찾기
 const animalsById = (id) => {
   return animalModels.find((animal) => animal.id === parseInt(id));
